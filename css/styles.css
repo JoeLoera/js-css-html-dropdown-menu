@@ -75,6 +75,8 @@ nav a {
   border-radius: 20px 20px 0 0;
   margin: 10px 10px 0 10px;
   text-decoration: none;
+  display: flex;
+  align-items: center;
 }
 
 nav a:hover {
@@ -84,16 +86,29 @@ nav a:hover {
 
 /* Desktop first development */
 @media screen and (max-width: 840px) {
+  nav {
+    display: flex;
+    flex-direction: column;
+  }
   nav button {
     display: block;
   }
 
-  .nav-links-container {
-    display: none;
+  .hidden {
+    display: none !important;
   }
 
   nav .main-container {
-    width: 100%;
     justify-content: space-between;
+  }
+
+  nav .nav-links-container {
+    display: block;
+    padding: 20px;
+    margin: 10px;
+  }
+
+  nav a {
+    border-radius: 20px;
   }
 }
